@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(list_users.size() > 0)
-                    list_users.clear();
+                 { list_users.clear();}
                 for(DataSnapshot postSnapshot:dataSnapshot.getChildren()){
                     User user = postSnapshot.getValue(User.class);
                     list_users.add(user);
